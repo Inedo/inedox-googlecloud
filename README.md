@@ -1,6 +1,6 @@
 # inedox-googlecloud
 
-[![Build status](https://buildmaster.inedo.com/api/ci-badges/image?API_Key=badges&$ApplicationId=17)](https://buildmaster.inedo.com/api/ci-badges/link?API_Key=badges&$ApplicationId=17)
+[![Build status](https://buildmaster.inedo.com/api/ci-badges/image?API_Key=badges&$ApplicationId=146)](https://buildmaster.inedo.com/api/ci-badges/link?API_Key=badges&$ApplicationId=146)
 
 Contains a ProGet Package Store backed by Google Cloud.
 
