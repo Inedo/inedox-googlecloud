@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>GoogleCloud</AssemblyName>
+		<RootNamespace>Inedo.Extensions.GoogleCloud</RootNamespace>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Inedo.SDK" Version="3.1.0" ExcludeAssets="runtime" />
+		<PackageReference Include="System.IO.Pipelines" Version="9.0.9" />
+	</ItemGroup>
+</Project>
