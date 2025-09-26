@@ -290,7 +290,7 @@ public sealed partial class GoogleCloudFileSystem : FileSystem
         else
         {
             request.Content = new ByteArrayContent([]);
-            request.Content.Headers.Add("Content-Range", $"*/{baseOffset}");
+            request.Content.Headers.Add("Content-Range", $"bytes */{baseOffset}");
         }
 
         using var response = await this.GetResponseAsync(request, HttpCompletionOption.ResponseContentRead, cancellationToken);
