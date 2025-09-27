@@ -46,6 +46,7 @@ public sealed partial class GoogleCloudFileSystem : FileSystem
         this.cacheKey = new Lazy<TokenCacheKey>(() => new TokenCacheKey(this.ServiceAccountKey!));
     }
 
+    [Required]
     [Persistent]
     [DisplayName("Bucket")]
     public string? BucketName { get; set; }
@@ -53,12 +54,14 @@ public sealed partial class GoogleCloudFileSystem : FileSystem
     [DisplayName("Prefix")]
     [PlaceholderText("none (use bucket root)")]
     public string? TargetPath { get; set; }
+    [Required]
     [Persistent(Encrypted = true)]
     [DisplayName("Service account key")]
     [FieldEditMode(FieldEditMode.Multiline)]
-    [Description("Paste the private key JSON object generated for the serivce account that ProGet will use to access the storage bucket.")]
+    [Description("""Paste the private key JSON object generated for the serivce account that ProGet will use to access the storage bucket. See <a href="https://cloud.google.com/iam/docs/service-account-creds#key-types" target="_blank">https://cloud.google.com/iam/docs/service-account-creds#key-types</a>""")]
     public string? ServiceAccountKey { get; set; }
     [Category("Advanced")]
+    [DisplayName("Service URL")]
     [PlaceholderText("https://storage.googleapis.com")]
     public string? BaseUrl { get; set; }
 
